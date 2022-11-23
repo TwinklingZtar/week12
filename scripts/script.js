@@ -20,6 +20,20 @@
 //     image.width = 50
 //     console.log(e.target)
 
-// }   
+// }  
+const buttonContainer = document.querySelector(".button-container") 
 
+function buttonGreenHover(e) {
+    if (e.target.tagName === "BUTTON") {
+        // e.target.style.backgroundColor = "green"
+        e.target.classList.toggle("greenBackground")
+    }
+}
 
+function textColor(e) {
+    e.target.style.color = e.target.textContent
+}
+
+buttonContainer.addEventListener("mouseover", buttonGreenHover)
+
+buttonContainer.addEventListener("click", textColor)
